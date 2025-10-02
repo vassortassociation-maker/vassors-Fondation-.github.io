@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vassor's Fondation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #b91c1c 50%, #ffffff 100%);
+        }
+        
+        .gallery-item {
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .wave-shape {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+        
+        .wave-shape svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 150px;
+        }
+        
+        .wave-shape .shape-fill {
+            fill: #FFFFFF;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+   <!-- Navigation -->
+<nav class="bg-white shadow-lg sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex justify-between items-center py-4">
+      
+      <!-- Logo -->
+      <div class="flex items-center space-x-4">
+        <!-- Image du logo -->
+        <a href="#accueil">
+          <img src="IMAGE/Img7.jpg" alt="Vassor's Fondation" class="h-10 w-auto">
+        </a>
+        <!-- Nom de la fondation à côté du logo -->
+        <span class="font-bold text-blue-900 text-xl">Vassor's Fondation</span>
+      </div>
+
+      <!-- Menu desktop -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#accueil" class="text-blue-900 hover:text-red-600 font-medium">Accueil</a>
+        <a href="#mission" class="text-blue-900 hover:text-red-600 font-medium">Notre Mission</a>
+        <a href="#galerie" class="text-blue-900 hover:text-red-600 font-medium">Galerie</a>
+        <a href="#contact" class="text-blue-900 hover:text-red-600 font-medium">Contact</a>
+      </div>
+
+      <!-- Menu mobile -->
+      <div class="md:hidden">
+        <button class="mobile-menu-button p-2 focus:outline-none">
+          <svg class="w-6 h-6 text-blue-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden bg-white shadow-lg">
+            <a href="#accueil" class="block py-2 px-4 text-blue-900 hover:bg-blue-50">Accueil</a>
+            <a href="#mission" class="block py-2 px-4 text-blue-900 hover:bg-blue-50">Notre Mission</a>
+            <a href="#galerie" class="block py-2 px-4 text-blue-900 hover:bg-blue-50">Galerie</a>
+            <a href="#contact" class="block py-2 px-4 text-blue-900 hover:bg-blue-50">Contact</a>
+           
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="relative text-white py-20 md:py-32 overflow-hidden">
+    <!-- Carrousel background très pâle -->
+    <div class="absolute inset-0 z-0">
+        <div class="carousel-bg w-full h-full opacity-30"></div>
+    </div>
+
+    <!-- Contenu principal -->
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6" style="color: #e21d1d;">Vassor's Fondation</h1>
+                <p class="text-xl md:text-2xl mb-8 font-light" style="color: #011343;">"Ansanm, ann pote lespwa kote lapenn ap viv."</p>
+                <p class="text-lg mb-8" style="color: #e21d1d;">Lancement officiel en octobre 2025</p>
+                <a href="#mission" class="bg-white text-blue-900 hover:bg-gray-100 font-bold py-3 px-8 rounded-full transition duration-300 inline-block">
+                    Découvrir notre mission
+                </a>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div class="w-64 h-64 md:w-80 md:h-80 bg-white bg-opacity-20 rounded-full absolute -top-6 -left-6"></div>
+                    <div class="w-64 h-64 md:w-80 md:h-80 bg-white bg-opacity-10 rounded-full absolute -bottom-6 -right-6"></div>
+                    <img src="IMAGE/Img6.jpg" alt="Children smiling" class="relative z-10 rounded-lg shadow-2xl w-64 h-64 md:w-80 md:h-80 object-cover">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wave -->
+    <div class="wave-shape relative z-10">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+    </div>
+</section>
+
+    <!-- Mission Section -->
+    <section id="mission" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Notre Mission</h2>
+                <div class="w-20 h-1 bg-red-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Vassor’s Fondation est une organisation sociale qui aide les familles pauvres, les enfants sans accès à l’école, les personnes abandonnées et les malades sans moyens.
+Nous croyons en la solidarité, l’amour et le développement de la communauté.
+Notre mission repose sur la fraternité, la dignité et l’espérance.
+Chaque enfant mérite d’apprendre, chaque parent a besoin de soutien, et chaque personne mérite de manger et d’avoir des soins.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-blue-50 p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center text-white mb-6 mx-auto">
+                        <i class="fas fa-child text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-4 text-center">Soutien aux enfants</h3>
+                    <p class="text-gray-600">Nous nous engageons à offrir aux enfants un environnement sûr et stimulant pour leur développement.</p>
+                </div>
+                
+                <div class="bg-red-50 p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center text-white mb-6 mx-auto">
+                        <i class="fas fa-hands-helping text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-red-600 mb-4 text-center">Aide aux familles</h3>
+                    <p class="text-gray-600">Nous accompagnons les familles en difficulté avec des programmes adaptés à leurs besoins.</p>
+                </div>
+                
+
+                
+                <div class="bg-blue-50 p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center text-white mb-6 mx-auto">
+                        <i class="fas fa-heart text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-4 text-center">Communauté solidaire</h3>
+                    <p class="text-gray-600">Nous bâtissons une communauté unie autour des valeurs de partage et d'entraide.</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 bg-gradient-to-r from-blue-900 to-red-600 rounded-lg p-8 text-white">
+                <div class="max-w-4xl mx-auto">
+                    <h3 class="text-2xl font-bold mb-4 text-center">Notre slogan</h3>
+                    <p class="text-xl text-center italic">"Ansanm, ann pote lespwa kote lapenn ap viv."</p>
+                    <p class="mt-6 text-center">Nous croyons que chaque action, même petite, peut apporter de l’espoir là où règne la détresse. Un simple geste peut illuminer une vie et semer la solidarité et la bienveillance..</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galerie" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Galerie Photo</h2>
+                <div class="w-20 h-1 bg-red-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Découvrez nos actions et les sourires que nous ferons naître demain</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white">
+                    <img src="IMAGE/Img1.jpg" alt="Happy children" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-blue-900">Activités éducatives</h3>
+                        <p class="text-gray-600 mt-2">Des ateliers pour stimuler la créativité des enfants.</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white">
+                    <img src="IMAGE/Img2.jpg" alt="Community support" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-blue-900">Soutien communautaire</h3>
+                        <p class="text-gray-600 mt-2">Distribution de fournitures scolaires aux familles.</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white">
+                    <img src="IMAGE/Img3.jpg" alt="Learning together" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-blue-900">Apprentissage collectif</h3>
+                        <p class="text-gray-600 mt-2">Des moments de partage et d'échange entre enfants.</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white">
+                    <img src="IMAGE/Img4.jpg" alt="Team work" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-blue-900">Visites dans les hôpitaux</h3>
+                        <p class="text-gray-600 mt-2">Malgré nos modestes moyens, nos bénévoles apporteront soutien et réconfort.</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white">
+                    <img src="IMAGE/Img5.jpg" alt="Happy faces" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-blue-900">Soutien aux sans-abri</h3>
+                        <p class="text-gray-600 mt-2">Nos bénévoles rendront visite aux sans-abri pour leur apporter soutien et réconfort.</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white">
+                    <div class="bg-gradient-to-br from-blue-900 to-red-600 w-full h-64 flex items-center justify-center">
+                        <div class="text-center p-6 text-white">
+                            <i class="fas fa-camera text-4xl mb-4"></i>
+                            <h3 class="text-xl font-bold">Plus à venir</h3>
+                            <p class="mt-2">Notre galerie s'enrichira après notre lancement en novembre 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+
+<section class="py-16 bg-blue-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">Lancement officiel de la Fondation</h2>
+        <div class="flex justify-center space-x-4 md:space-x-8 mb-8">
+            <div class="bg-white bg-opacity-20 rounded-lg p-4 w-20 md:w-24">
+                <div class="text-3xl md:text-4xl font-bold" id="countdown-days">00</div>
+                <div class="text-sm mt-2">Jours</div>
+            </div>
+            <div class="bg-white bg-opacity-20 rounded-lg p-4 w-20 md:w-24">
+                <div class="text-3xl md:text-4xl font-bold" id="countdown-hours">00</div>
+                <div class="text-sm mt-2">Heures</div>
+            </div>
+            <div class="bg-white bg-opacity-20 rounded-lg p-4 w-20 md:w-24">
+                <div class="text-3xl md:text-4xl font-bold" id="countdown-minutes">00</div>
+                <div class="text-sm mt-2">Minutes</div>
+            </div>
+            <div class="bg-white bg-opacity-20 rounded-lg p-4 w-20 md:w-24">
+                <div class="text-3xl md:text-4xl font-bold" id="countdown-seconds">00</div>
+                <div class="text-sm mt-2">Secondes</div>
+            </div>
+        </div>
+        <p class="text-lg">Rejoignez-nous pour notre inauguration le 25   Octobre 2025 à 08:00 AM</p>
+    </div>
+</section>
+
+
+
+    <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Contactez-nous</h2>
+      <div class="w-20 h-1 bg-blue-900 mx-auto mb-6"></div>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        Nous sommes à votre écoute pour toute question ou suggestion.
+      </p>
+    </div>
+
+    <div class="md:w-1/2 mx-auto bg-gray-50 rounded-lg p-8 shadow-md">
+      <h3 class="text-xl font-bold text-blue-900 mb-6">Informations de contact</h3>
+
+      <div class="space-y-6">
+        <div class="flex items-start">
+          <div class="bg-blue-700 text-white p-3 rounded-full mr-4">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-800">Adresse</h4>
+            <p class="text-gray-600">Fondation Vassor's<br>Nord-ouest, Haïti</p>
+          </div>
+        </div>
+
+        <div class="flex items-start">
+          <div class="bg-blue-700 text-white p-3 rounded-full mr-4">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-800">Email</h4>
+            <p class="text-gray-600">vassorsfondation@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="flex items-start">
+          <div class="bg-blue-700 text-white p-3 rounded-full mr-4">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-800">Téléphone</h4>
+            <p class="text-gray-600">+509 3381-99-54 | +1 (954) 830-9569</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8">
+        <h4 class="font-semibold text-gray-800 mb-4">Suivez-nous</h4>
+        <div class="flex space-x-3">
+          <a href="https://wa.me/50933819954" target="_blank" class="text-green-600 hover:text-green-800 transition">
+            <i class="fab fa-whatsapp fa-lg"></i>
+          </a>
+          <a href="https://web.facebook.com/profile.php?id=61579710028533" target="_blank" class="text-blue-700 hover:text-blue-900 transition">
+            <i class="fab fa-facebook-f fa-lg"></i>
+          </a>
+          <a href="https://www.tiktok.com/@vassorsfondation" target="_blank" class="text-black hover:text-gray-800 transition">
+            <i class="fab fa-tiktok fa-lg"></i>
+          </a>
+          <a href="https://www.youtube.com/@VassorsFondation" target="_blank" class="text-red-600 hover:text-red-800 transition">
+            <i class="fab fa-youtube fa-lg"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+
+      <!-- Logo & Slogan -->
+      <div>
+        <h2 class="text-2xl font-bold mb-2">Vassor's Fondation</h2>
+        <p class="text-blue-200 italic mb-6">"Ansanm, ann pote lespwa kote lapenn ap viv."</p>
+        <div class="flex space-x-3 mt-2">
+          <a href="https://wa.me/50933819954" target="_blank" class="text-green-500"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://web.facebook.com/profile.php?id=61579710028533" target="_blank" class="text-blue-200"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.tiktok.com/@vassorsfondation" target="_blank" class="text-white"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.youtube.com/@VassorsFondation" target="_blank" class="text-red-600"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <!-- Liens rapides -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Liens rapides</h3>
+        <ul class="space-y-2">
+          <li><a href="#accueil" class="text-blue-200 hover:text-white">Accueil</a></li>
+          <li><a href="#mission" class="text-blue-200 hover:text-white">Notre Mission</a></li>
+          <li><a href="#galerie" class="text-blue-200 hover:text-white">Galerie</a></li>
+          <li><a href="#contact" class="text-blue-200 hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Contact</h3>
+        <ul class="space-y-2 text-blue-200">
+          <li><strong>Adresse :</strong> Vassor's Fondation , Nord-ouest, Haïti</li>
+          <li><strong>Email :</strong> <a href="mailto:vassorsfondation@gmail.com" class="hover:text-white">vassorsfondation@gmail.com</a></li>
+          <li><strong>Téléphone :</strong> +509 3381-99-54 | +1 (954) 830-9569</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="border-t border-blue-800 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center text-blue-200 text-sm">
+      <p>© 2025 Vassor's Fondation. Tous droits réservés.</p>
+      <p class="mt-2 md:mt-0">Développé par Ruldolf Vassort</p>
+    </div>
+  </div>
+</footer>
+
+
+    <script>
+    
+        
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+       
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+
+    <script>
+// Date cible du lancement : 18 novembre 2025 à 08:00 AM
+const launchDate = new Date("October 25, 2025 08:00:00").getTime();
+
+// Fonction de mise à jour du countdown
+const countdown = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = launchDate - now;
+
+    if(distance < 0){
+        clearInterval(countdown);
+        document.getElementById("countdown-days").innerText = "00";
+        document.getElementById("countdown-hours").innerText = "00";
+        document.getElementById("countdown-minutes").innerText = "00";
+        document.getElementById("countdown-seconds").innerText = "00";
+        return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000*60*60));
+    const minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
+    const seconds = Math.floor((distance % (1000*60)) / 1000);
+
+    document.getElementById("countdown-days").innerText = days.toString().padStart(2, "0");
+    document.getElementById("countdown-hours").innerText = hours.toString().padStart(2, "0");
+    document.getElementById("countdown-minutes").innerText = minutes.toString().padStart(2, "0");
+    document.getElementById("countdown-seconds").innerText = seconds.toString().padStart(2, "0");
+}, 1000);
+</script>
+
+<script>
+// Liste des images du carrousel
+const images = [
+    'IMAGE/Img1.jpg',
+    'IMAGE/Img2.jpg',
+    'IMAGE/Img3.jpg',
+    'IMAGE/Img4.jpg'
+];
+
+let index = 0;
+const carouselBg = document.querySelector('.carousel-bg');
+
+function changeBackground() {
+    carouselBg.style.backgroundImage = `url('${images[index]}')`;
+    carouselBg.style.backgroundSize = 'cover';
+    carouselBg.style.backgroundPosition = 'center';
+    index = (index + 1) % images.length;
+}
+
+// Initialisation
+changeBackground();
+
+// Changement automatique toutes les 5 secondes
+setInterval(changeBackground, 5000);
+</script>
+
+<style>
+.carousel-bg {
+    width: 100%;
+    height: 100%;
+    transition: background-image 1s ease-in-out;
+}
+</style>
+
+</body>
+
+</html>
